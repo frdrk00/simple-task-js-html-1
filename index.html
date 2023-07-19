@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spin Wheel App</title>
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="spinner-wrapper">
+      <div id="final-value"></div>
+      <div class="container">
+        <canvas id="wheel"></canvas>
+        <div class="btn-center">
+          <button id="spin-btn">spin</button>
+        </div>
+        <img src="spinner-arrow-.svg" alt="spinner-arrow" />
+      </div>
+    </div>
+    <div class="option-wrapper">
+      <div class="container">
+        <div class="input-container">
+          <div id="options"></div>
+          <input
+            type="text"
+            id="input"
+            class="input-field"
+            placeholder="Enter a value"
+          />
+          <div class="btn-center option-button">
+            <button id="add-button">add option</button>
+          </div>
+          <input type="text" id="input-labels" placeholder="Enter labels">
+<button id="update-button">Update Labels</button>
+        </div>
+      </div>
+    </div>
+
+    
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.1.0/chartjs-plugin-datalabels.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
