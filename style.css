@@ -21,17 +21,18 @@ body {
 
 .option-wrapper {
   position: absolute;
-  width: 292px;
+  width: 90%;
   height: 630px;
-  border-radius: 20px;
-  max-width: 34.37em;
+  max-width: 292px;
   max-height: 90vh;
-  top: 26%;
-  left: 55%;
+  transform: translate(50%, -50%);
+  border-radius: 20px;
+  top: 50%;
+  left: 45%;
   padding: 3em;
   border-radius: 1em;
   box-shadow: 0 4em 5em rgba(27, 8, 53, 0.2);
-  background-color: #a0a0a0;
+  background-color: #b8b8b8;
 }
 
 #add-button {
@@ -165,27 +166,29 @@ input {
   }
 }
 
-#mini-wheel {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  top: 37.9%;
-  right: 44.65%;
-  border: 12px solid #000; /* Border color, adjust as needed */
-  border-radius: 50%; /* To create a circular shape */
-  color: black;
-  z-index: 50;
-}
-
 #mini-wheel-black {
   position: absolute;
   width: 50px;
   height: 50px;
-  top: 37.9%;
-  right: 44.65%;
-  border: 25px solid #9d4343; /* Border color, adjust as needed */
-  border-radius: 50%; /* To create a circular shape */
+  top: 43%;
+  right: 39%;
+  transform: translate(-50%, -50%);
+  border: 25px solid #9d4343;
+  border-radius: 50%;
   color: black;
+}
+
+#mini-wheel {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 43%;
+  right: 39%;
+  transform: translate(-50%, -50%);
+  border: 12px solid #000;
+  border-radius: 50%;
+  color: black;
+  z-index: 50;
 }
 
 #spin-btn {
@@ -233,13 +236,88 @@ img {
   margin-left: -25px;
 }
 
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: #202020;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 16px;
+  text-align: center;
+  color: #555555;
+  margin-bottom: 20px;
+}
+
 @media screen and (max-width: 768px) {
-  .wrapper {
-    font-size: 12px;
+  body {
+    height: 100%;
+    background: #d9d9d9;
   }
-  img {
-    right: -5%;
-    width: 40px;
-    height: 40px;
+
+  .title {
+    font-size: 20px;
+  }
+  .description {
+    font-size: 14px;
+  }
+
+  .option-value {
+    background-color: #c9c9c9;
+  }
+
+  #mini-wheel-black {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 26%;
+    right: 34%;
+    transform: translate(-50%, -50%);
+    border: 25px solid #9d4343;
+    border-radius: 50%;
+    color: black;
+  }
+
+  #mini-wheel {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 26%;
+    right: 34%;
+    transform: translate(-50%, -50%);
+    border: 12px solid #000;
+    border-radius: 50%;
+    color: black;
+    z-index: 50;
+  }
+
+  .option-wrapper {
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+    left: 0;
+    top: 0;
+    transform: none;
+    padding: 2em;
+    margin: 20px auto;
+    box-shadow: none;
+    background-color: #d9d9d9;
+    border-bottom: 1px solid #000;
+  }
+
+  .spinner-wrapper {
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+    left: 0;
+    top: 700px;
+    transform: none;
+    padding: 2em;
+    margin: 20px auto;
+    background-color: #d9d9d9;
   }
 }

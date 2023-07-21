@@ -12,14 +12,16 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="spinner-wrapper">
-      <div id="final-value"></div>
-      <div class="container">
-        
-        <canvas id="wheel"></canvas>
-        <div id="mini-wheel" ></div>
-        <div id="mini-wheel-black"></div>
-        <div class="btn-center">
+
+    <div class="main-wrapper">
+      <div class="spinner-wrapper">
+        <div id="final-value"></div>
+        <div class="container">
+          
+          <canvas id="wheel"></canvas>
+          <div id="mini-wheel" ></div>
+          <div id="mini-wheel-black"></div>
+          <div class="btn-center">
           <button id="spin-btn">spin</button>
         </div>
         <img src="https://res.cloudinary.com/dlaxowrrz/image/upload/v1689872728/spinner-arrow-_jes9bd.svg" alt="spinner-arrow" />
@@ -30,13 +32,13 @@
       <div class="container">
         <div class="input-container">
           <div class="title">Option panel</div>
-          <div class="description">Max options: 6</div>
+          <div class="description">Max options: 8</div>
           <div id="options"></div>
           <input
             type="text"
             id="input"
             class="input-field"
-            placeholder="Your SPIN options here"
+            placeholder="Your spin options here"
           />
           <div class="btn-center option-button">
             <button id="add-button">add option</button>
@@ -45,8 +47,8 @@
         </div>
       </div>
     </div>
+  </div>
 
-    
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.1.0/chartjs-plugin-datalabels.min.js"></script>
