@@ -1,25 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter');
+
 * {
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
+
 body {
   height: 100vh;
   background: linear-gradient(135deg, #c9c9c9, #d9d9d9);
 }
 
-.btn-center {
-  position: relative;
-  margin-top: 30px;
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
 }
 
-/* Options */
+.spinnerWrapper {
+  position: absolute;
+  width: 90%;
+  max-width: 34.37em;
+  max-height: 90vh;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 35%;
+  padding: 3em;
+  border-radius: 1em;
+  box-shadow: 0 4em 5em rgba(27, 8, 53, 0.2);
+}
 
-.option-wrapper {
+.optionWrapper {
   position: absolute;
   width: 90%;
   height: 630px;
@@ -35,13 +48,38 @@ body {
   background-color: #b8b8b8;
 }
 
-#add-button {
+.btnCenter {
+  position: relative;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#spinBtn {
+  width: 300px;
+  height: 50px;
+  border-radius: 20px;
+  font-size: 36px;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 44px;
+  letter-spacing: 0em;
+  text-align: center;
+  background: #f5f5f5;
+}
+
+#spinBtn:hover {
+  background: #e6e6e6;
+  cursor: pointer;
+}
+
+#addOptionBtn {
   width: 252px;
   height: 35px;
   top: 156px;
   left: -87px;
   border-radius: 20px;
-  font-family: Inter;
   font-size: 15px;
   font-weight: 700;
   text-transform: uppercase;
@@ -51,40 +89,21 @@ body {
   background: #d9d9d9;
 }
 
-#add-button:hover {
-  background: #f5f5f5;
+#addOptionBtn:hover {
+  background: #e6e6e6;
   cursor: pointer;
 }
 
-.option-button {
-  position: absolute;
-  top: 90%;
-}
-
-.option-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 100vh;
-}
-.spinner {
-  margin-bottom: 20px;
-}
-.input-container {
+.inputContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.input-field {
-  margin-bottom: 10px;
 }
 
 input {
   width: 100%;
   height: 35px;
   border-radius: 20px;
-  font-family: Inter;
   font-size: 12px;
   font-weight: 400;
   text-transform: uppercase;
@@ -96,137 +115,19 @@ input {
   outline: none;
 }
 
-.options {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.option {
-  display: flex;
-  align-items: center;
-  margin-bottom: 5px;
-}
-.option-value {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 5px;
-  width: 149px;
-  height: 35px;
-  top: -391px;
-  left: -46px;
-  border-radius: 20px;
-  background-color: #d9d9d9;
-  font-family: Inter;
-  font-size: 15px;
-  font-weight: 700;
-  line-height: 18px;
-  letter-spacing: 0em;
-  text-align: left;
-}
-.delete-button {
-  margin-left: 5px;
-  padding: 10px;
-  background-color: transparent;
-  border: none;
-  text-decoration: none;
-  color: red;
-  cursor: pointer;
-}
-
-/* Spinner */
-
-.spinner-wrapper {
-  position: absolute;
-  width: 90%;
-  max-width: 34.37em;
-  max-height: 90vh;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 35%;
-  padding: 3em;
-  border-radius: 1em;
-  box-shadow: 0 4em 5em rgba(27, 8, 53, 0.2);
-}
-
-.container {
+.wheelBox {
   position: relative;
   width: 100%;
   height: 100%;
 }
-#wheel {
+
+#spinWheel {
   max-height: inherit;
   width: inherit;
-  top: 0;
-  padding: 0;
-}
-@keyframes rotate {
-  100% {
-    transform: rotate(360deg);
-  }
+  transform: rotate(270deg);
 }
 
-#mini-wheel-black {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  top: 43%;
-  right: 39%;
-  transform: translate(-50%, -50%);
-  border: 25px solid #9d4343;
-  border-radius: 50%;
-  color: black;
-}
-
-#mini-wheel {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  top: 43%;
-  right: 39%;
-  transform: translate(-50%, -50%);
-  border: 12px solid #000;
-  border-radius: 50%;
-  color: black;
-  z-index: 50;
-}
-
-#spin-btn {
-  width: 300px;
-  height: 50px;
-  border-radius: 20px;
-  font-family: Inter;
-  font-size: 36px;
-  font-weight: 400;
-  text-transform: uppercase;
-  line-height: 44px;
-  letter-spacing: 0em;
-  text-align: center;
-  background: #f5f5f5;
-}
-
-#spin-btn:hover {
-  background: #e6e6e6;
-  cursor: pointer;
-}
-
-.triangle {
-  width: 73.00000000000027px;
-  height: 60.00000000000023px;
-  top: -333.4465637207031px;
-  left: -574.446533203125px;
-  border: 5px;
-}
-
-img {
-  position: absolute;
-  width: 3em;
-  top: -5.5%;
-  right: 44.6%;
-  rotate: -90deg;
-}
-
-#final-value {
+#text {
   position: absolute;
   font-size: 1rem;
   font-weight: 500;
@@ -248,76 +149,154 @@ img {
   font-size: 16px;
   text-align: center;
   color: #555555;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 
-@media screen and (max-width: 768px) {
+.descriptionPrice {
+  font-size: 12px;
+  text-align: center;
+  color: #555555;
+  margin-bottom: 10px;
+}
+
+.optionsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.options {
+  display: flex;
+  align-items: center;
+}
+
+.option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  width: 149px;
+  height: 35px;
+  top: -391px;
+  left: -46px;
+  border-radius: 20px;
+  background-color: #d9d9d9;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.optionButton {
+  position: absolute;
+  top: 85%;
+}
+
+.deleteButton {
+  margin-left: 5px;
+  padding: 10px;
+  background-color: transparent;
+  border: none;
+  text-decoration: none;
+  color: red;
+  cursor: pointer;
+}
+
+#miniWheel {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 43%;
+  right: 39%;
+  transform: translate(-50%, -50%);
+  border: 25px solid #9d4343;
+  border-radius: 50%;
+}
+
+#miniWheelBlack {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 43%;
+  right: 39%;
+  transform: translate(-50%, -50%);
+  border: 12px solid #181818;
+  border-radius: 50%;
+}
+
+.fa-solid {
+  position: absolute;
+  top: -8%;
+  left: 43.7%;
+  font-size: 4rem;
+  color: #181818;
+  transform: rotate(-225deg);
+}
+
+@media only screen and (max-width: 767px) {
   body {
-    height: 100%;
-    background: #d9d9d9;
+    font-size: 0px;
   }
 
-  .title {
-    font-size: 20px;
-  }
-  .description {
-    font-size: 14px;
+  #text {
+    padding-left: 20px;
   }
 
-  .option-value {
-    background-color: #c9c9c9;
+  .spinnerWrapper {
+    width: 100%;
+    max-width: 90%;
+    left: 50%;
+    top: 37%;
   }
 
-  #mini-wheel-black {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    top: 26%;
-    right: 34%;
-    transform: translate(-50%, -50%);
+  .optionWrapper {
+    width: 100%;
+    max-width: 100%;
+    left: 50%;
+    top: 80%;
+    transform: translateX(-50%);
+  }
+
+  #spinWheel {
+    margin-top: 40px;
+  }
+
+  .btnCenter {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  #spinBtn {
+    width: 80%;
+  }
+
+  #addOptionBtn {
+    margin-top: 20px;
+  }
+
+  input {
+    width: 60%;
+  }
+
+  #miniWheel {
+    transform: translate(-25%, -58%);
     border: 25px solid #9d4343;
     border-radius: 50%;
-    color: black;
   }
 
-  #mini-wheel {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    top: 26%;
-    right: 34%;
-    transform: translate(-50%, -50%);
-    border: 12px solid #000;
+  #miniWheelBlack {
+    transform: translate(-25%, -58%);
+    border: 12px solid #181818;
     border-radius: 50%;
-    color: black;
-    z-index: 50;
   }
 
-  .option-wrapper {
-    width: 100%;
-    height: 100%;
-    max-width: none;
-    max-height: none;
-    left: 0;
-    top: 0;
-    transform: none;
-    padding: 2em;
-    margin: 20px auto;
-    box-shadow: none;
-    background-color: #d9d9d9;
-    border-bottom: 1px solid #000;
-  }
-
-  .spinner-wrapper {
-    width: 100%;
-    height: 100%;
-    max-width: none;
-    max-height: none;
-    left: 0;
-    top: 700px;
-    transform: none;
-    padding: 2em;
-    margin: 20px auto;
-    background-color: #d9d9d9;
+  .fa-solid {
+    top: -10%;
+    left: 41.9%;
+    font-size: 4rem;
+    color: #181818;
+    transform: rotate(-225deg);
   }
 }

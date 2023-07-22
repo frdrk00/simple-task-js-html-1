@@ -1,55 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Spin Wheel App</title>
-    <!-- Google Font -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Stylesheet -->
+    <title>Task #1</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
   </head>
   <body>
-
-    <div class="main-wrapper">
-      <div class="spinner-wrapper">
-        <div id="final-value"></div>
-        <div class="container">
-          
-          <canvas id="wheel"></canvas>
-          <div id="mini-wheel" ></div>
-          <div id="mini-wheel-black"></div>
-          <div class="btn-center">
-          <button id="spin-btn">spin</button>
+    <div class="container">
+    <div class="spinnerWrapper">
+        <div id="text">Previous prize : </div>
+        <div class="wheelBox">
+          <canvas id="spinWheel"></canvas>
+          <div id="miniWheel" ></div>
+          <div id="miniWheelBlack"></div>
+          <div class="btnCenter">
+            <button id="spinBtn">Spin</button>
+          </div>
+          <i class="fa-solid fa-location-arrow"></i>
         </div>
-        <img src="https://res.cloudinary.com/dlaxowrrz/image/upload/v1689872728/spinner-arrow-_jes9bd.svg" alt="spinner-arrow" />
       </div>
-    </div>
-
-    <div class="option-wrapper">
-      <div class="container">
-        <div class="input-container">
+      
+      <div class="optionWrapper">
+        <div class="inputContainer">
           <div class="title">Option panel</div>
-          <div class="description">Max options: 8</div>
-          <div id="options"></div>
+          <div class="description">Max. options: 8</div>
+          <div class="descriptionPrice">Max. deposit: 9999$</div>
+          <div class="optionsContainer">
+            <div id="options"></div>
+          </div>
           <input
             type="text"
-            id="input"
-            class="input-field"
+            id="optionInput"
             placeholder="Your spin options here"
           />
-          <div class="btn-center option-button">
-            <button id="add-button">add option</button>
+          <div class="maxOptions"></div>
+          <div class="btnCenter optionButton">
+            <button id="addOptionBtn" >Add Option</button>
           </div>
-
         </div>
       </div>
-    </div>
-  </div>
-
-    <!-- Scripts -->
+        
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.1.0/chartjs-plugin-datalabels.min.js"></script>
     <script src="script.js"></script>
